@@ -1,16 +1,8 @@
 ---
-const whatsappNumber = "5567999389340"; 
-const whatsappMessage = "Olá, gostaria de saber mais sobre os serviços da Brasil Pecuária Consultoria!";
-const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+import WhatsappLink from '../partials/WhatsappLink.astro';
 ---
+<WhatsappLink class="fixed bottom-6 right-6 z-40 group">
 
-<a
-  href={whatsappLink}
-  target="_blank"
-  rel="noopener noreferrer"
-  class="fixed bottom-6 right-6 z-40 group"
-  aria-label="Conversar com Brasil Pecuária Consultoria no WhatsApp"
->
   {/* Button container */}
   <div class="relative">
     {/* Pulse animation background */}
@@ -27,7 +19,7 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       Conversar no WhatsApp
     </div>
   </div>
-</a>
+</WhatsappLink>
 
 <style>
   @keyframes pulse {
