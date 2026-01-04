@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+
+const clientLogos = [
+  { id: 1, name: "Fazenda Cabeceira do Tererê" , image: "/images/fazendacabeceiradoterere.png"},
+];
+
+// Create array with duplicates for seamless infinite scroll
+const scrollingLogos = [...clientLogos, ...clientLogos.slice(0, 3)];
+---
+
+<section id="gallery" class="py-16 bg-taupe-grey-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-dark-spruce-900 mb-12">
+      Confiado por Nossos Parceiros
+    </h2>
+
+    {/* Infinite scroll container */}
+    <div class="relative overflow-hidden">
+      <div class="flex animate-scroll space-x-8 py-8">
+        {scrollingLogos.map((logo) => (
+          <div key={logo.id} class="logo-container relative flex-shrink-0 h-20 w-40 bg-white rounded-lg shadow flex items-center justify-center p-4">
+              <Image src={logo.image} alt={logo.name} width="50" height="50"/>
+              <div class="logo-tooltip absolute hidden bg-dark-spruce-900 text-white text-xs rounded py-1 px-2 z-10 pointer-events-none whitespace-nowrap">
+                {logo.name}
+              </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  /* Pause on hover */
+  section:hover .animate-scroll {
+    animation-play-state: paused;
+  }
+</style>
+
+<script>
+  const logoContainers = document.querySelectorAll('.logo-container');
+
+  logoContainers.forEach(container => {
+    const tooltip = container.querySelector('.logo-tooltip');
+    if (!tooltip) return;
+
+    container.addEventListener('mouseenter', () => {
+      tooltip.classList.remove('hidden');
+    });
+
+    container.addEventListener('mouseleave', () => {
+      tooltip.classList.add('hidden');
+    });
+
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      tooltip.style.left = `${x + 10}px`;
+      tooltip.style.top = `${y - 20}px`;
+    });
+  });
+</script>

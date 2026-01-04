@@ -1,14 +1,23 @@
+---                            
+import '../styles/global.css';
+import Topbar from '../components/Topbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---                            
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/images/logo-rgb.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Brasil Pecuária Consultoria - Práticas Sustentáveis de Pecuária</title>
 	</head>
-	<body>
+	<body class="bg-white text-dark-spruce-900">
+		<Topbar />
 		<slot />
+		<Footer />
+		<WhatsAppButton />
 	</body>
 </html>
 
@@ -17,6 +26,6 @@
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 	}
 </style>

@@ -1,0 +1,63 @@
+---
+const coreValues = [
+  {
+    title: "Sustentabilidade",
+    description:
+      "Priorizamos a responsabilidade ambiental e a saúde ecológica de longo prazo em todas as nossas práticas e recomendações.",
+  },
+  {
+    title: "Excelência",
+    description:
+      "Buscamos os mais altos padrões de qualidade e inovação em tudo o que fazemos por nossos parceiros.",
+  },
+  {
+    title: "Integridade",
+    description:
+      "Conduzimos negócios com honestidade, transparência e princípios éticos que constroem confiança com nossa comunidade.",
+  },
+  {
+    title: "Inovação",
+    description:
+      "Abraçamos novas tecnologias e metodologias para melhorar continuamente os resultados de nossos clientes.",
+  },
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Mission Section */}
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-dark-spruce-900 mb-6">Nossa Missão</h2>
+      <p class="text-lg text-taupe-grey-700 leading-relaxed">
+        Capacitar agricultores pecuários brasileiros com práticas inovadoras e
+        sustentáveis que aumentem a produtividade, protegendo nosso ambiente e
+        comunidades. Acreditamos em criar um futuro onde a agricultura prospera
+        junto com a natureza.
+      </p>
+    </div>
+
+    {/* Vision Section */}
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-dark-spruce-900 mb-6">Nossa Visão</h2>
+      <p class="text-lg text-taupe-grey-700 leading-relaxed">
+        Ser a autoridade líder em práticas sustentáveis de pecuária em todo o
+        Brasil, reconhecida por nosso compromisso com excelência, inovação e
+        responsabilidade ambiental. Vislumbramos um setor agrícola próspero que
+        proporciona prosperidade aos agricultores e às gerações futuras.
+      </p>
+    </div>
+
+    {/* Core Values */}
+    <div>
+      <h2 class="text-3xl font-bold text-dark-spruce-900 mb-12">Valores Fundamentais</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {coreValues.map((value) => (
+          <div class="bg-dark-spruce-50 rounded-lg p-8 border-l-4 border-dark-spruce-700">
+            <h3 class="text-xl font-bold text-dark-spruce-700 mb-3">{value.title}</h3>
+            <p class="text-taupe-grey-700">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

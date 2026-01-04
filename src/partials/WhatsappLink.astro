@@ -1,0 +1,20 @@
+---
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+const whatsappNumber = "5567999389340"; 
+const whatsappMessage = "Olá, gostaria de saber mais sobre os serviços da Brasil Pecuária Consultoria!";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+---
+
+<a
+  href={whatsappLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  class:list={[className]}
+  aria-label="Conversar com Brasil Pecuária Consultoria no WhatsApp"
+>
+<slot/>
+</a>

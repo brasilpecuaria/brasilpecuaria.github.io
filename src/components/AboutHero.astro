@@ -1,0 +1,19 @@
+---
+import SiteDescription from '../partials/SiteDescription.astro';
+---
+
+<section class="relative w-full bg-gradient-to-r from-dark-spruce-700 to-dark-spruce-900 text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+  {/* Background pattern */}
+  <div class="absolute inset-0 opacity-20">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-dark-spruce-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-dark-spruce-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
+  </div>
+
+  {/* Content */}
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+      Sobre Brasil Pecuária Consultoria
+    </h1>
+    <SiteDescription class="text-lg sm:text-xl text-dark-spruce-100" />
+  </div>
+</section>

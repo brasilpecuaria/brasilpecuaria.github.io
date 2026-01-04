@@ -1,0 +1,9 @@
+---
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+const siteDescription = "Sua fazenda mais lucrativa. Sua gestão mais forte. Sua independência garantida.";
+---
+<p class:list={[className]}>{siteDescription}</p>

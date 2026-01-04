@@ -1,0 +1,39 @@
+---
+// TODO: Atualize para fatos reais
+const testimonials = [
+  {
+    id: 1,
+    text: "A Pecuária Brasil ajudou a melhorar significativamente nossas práticas de pecuária. A expertise e orientação têm sido inestimáveis para nossa operação.",
+    name: "João da Silva"
+  },
+  {
+    id: 2,
+    text: "Os recursos e a comunidade fornecidos pela Pecuária Brasil são excepcionais. Altamente recomendado para qualquer pessoa na indústria de pecuária.",
+    name: "Maria Costa"
+  },
+  {
+    id: 3,
+    text: "Desde a parceria com a Pecuária Brasil, nossa produtividade aumentou e nossas práticas são mais sustentáveis.",
+    name: "Paulo Ribeiro"
+  }
+];
+---
+
+<section id="testimonials" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-dark-spruce-900 mb-12">
+      O Que Nossos Clientes Dizem
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial) => (
+        <div key={testimonial.id} class="bg-white rounded-lg p-8 border border-taupe-grey-200 hover:border-dark-spruce-300 transition">
+          <p class="text-taupe-grey-700 mb-4 leading-relaxed">
+            "{testimonial.text}"
+          </p>
+          <p class="font-semibold text-dark-spruce-900">{testimonial.name}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
