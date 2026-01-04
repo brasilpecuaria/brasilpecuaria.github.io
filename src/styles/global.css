@@ -1,0 +1,66 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "tailwindcss";
+
+@theme {
+    --color-dark-spruce-50: #e9fbea;
+--color-dark-spruce-100: #d4f7d4;
+--color-dark-spruce-200: #a9efaa;
+--color-dark-spruce-300: #7ee77f;
+--color-dark-spruce-400: #53df55;
+--color-dark-spruce-500: #28d72a;
+--color-dark-spruce-600: #20ac22;
+--color-dark-spruce-700: #188119;
+--color-dark-spruce-800: #105611;
+--color-dark-spruce-900: #082b08;
+--color-dark-spruce-950: #061e06;
+
+--color-golden-bronze-50: #faf7ea;
+--color-golden-bronze-100: #f5efd6;
+--color-golden-bronze-200: #ebdfad;
+--color-golden-bronze-300: #e1ce84;
+--color-golden-bronze-400: #d7be5b;
+--color-golden-bronze-500: #cdae32;
+--color-golden-bronze-600: #a48b28;
+--color-golden-bronze-700: #7b681e;
+--color-golden-bronze-800: #524614;
+--color-golden-bronze-900: #29230a;
+--color-golden-bronze-950: #1d1807;
+
+--color-shadow-grey-50: #f4f0f4;
+--color-shadow-grey-100: #e8e2e9;
+--color-shadow-grey-200: #d2c5d3;
+--color-shadow-grey-300: #bba8bd;
+--color-shadow-grey-400: #a58ba7;
+--color-shadow-grey-500: #8e6e91;
+--color-shadow-grey-600: #725874;
+--color-shadow-grey-700: #554257;
+--color-shadow-grey-800: #392c3a;
+--color-shadow-grey-900: #1c161d;
+--color-shadow-grey-950: #140f14;
+
+--color-taupe-grey-50: #f3f2f3;
+--color-taupe-grey-100: #e7e4e6;
+--color-taupe-grey-200: #cfc9ce;
+--color-taupe-grey-300: #b6afb5;
+--color-taupe-grey-400: #9e949d;
+--color-taupe-grey-500: #867984;
+--color-taupe-grey-600: #6b616a;
+--color-taupe-grey-700: #50494f;
+--color-taupe-grey-800: #363035;
+--color-taupe-grey-900: #1b181a;
+--color-taupe-grey-950: #131113;
+
+--color-parchment-50: #f5f4f0;
+--color-parchment-100: #ebe9e0;
+--color-parchment-200: #d6d3c2;
+--color-parchment-300: #c2bda3;
+--color-parchment-400: #ada785;
+--color-parchment-500: #999166;
+--color-parchment-600: #7a7452;
+--color-parchment-700: #5c573d;
+--color-parchment-800: #3d3a29;
+--color-parchment-900: #1f1d14;
+--color-parchment-950: #15140e;
+
+
+}

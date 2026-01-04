@@ -1,0 +1,41 @@
+---
+const teamMembers = [
+  {
+    name: "Carlos Silva",
+    role: "CEO & Fundador",
+    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    bio: "25+ anos em agricultura de pecuária com expertise em práticas agrícolas sustentáveis.",
+  },
+  {
+    name: "Dra. Beatriz Costa",
+    role: "Chefe de Pesquisa",
+    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    bio: "Doutora em Ciência Ambiental, liderando inovação em metodologias sustentáveis de pecuária.",
+  },
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+      Conheça Nosso Time
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {teamMembers.map((member) => (
+        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+          <img
+            src={member.photo}
+            alt={member.name}
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
+            <p class="text-sm text-green-700 font-semibold mb-3">{member.role}</p>
+            <p class="text-sm text-gray-600">{member.bio}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
