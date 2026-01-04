@@ -7,21 +7,21 @@ import { Image } from 'astro:assets';
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
     {/* Logo/Brand */}
     <div class="flex items-center flex-shrink-0">
-        <Image src="/images/logo-rgb.png" alt="logo" class="mr-2" width="50" height="50" />
-      <a href="/" class="text-2xl font-bold text-dark-spruce-800 hover:text-green-800 transition">Brasil Pecuária Consultoria</a>
+        <Image src="/images/logo-rgb.png" alt="Brasil Pecuária Consultoria Logo" class="mr-2" width="50" height="50" />
+      <a href="/" class="text-2xl font-bold text-dark-spruce-800 hover:text-dark-spruce-700 transition">Brasil Pecuária Consultoria</a>
     </div>
 
     {/* Desktop Menu */}
     <div class="hidden md:flex items-center space-x-8">
-      <a href="/" class={`transition ${currentPage === '/' ? 'text-green-700 font-semibold' : 'text-gray-700 hover:text-green-700'}`}>Página Inicial</a>
-      <a href="/about" class={`transition ${currentPage === '/about/' ? 'text-green-700 font-semibold' : 'text-gray-700 hover:text-green-700'}`}>Sobre</a>
-      <a href="/#contact" class="text-gray-700 hover:text-green-700 transition">Contato</a>
+      <a href="/" class={`transition ${currentPage === '/' ? 'text-dark-spruce-700 font-semibold' : 'text-taupe-grey-700 hover:text-dark-spruce-700'}`}>Página Inicial</a>
+      <a href="/about" class={`transition ${currentPage === '/about/' ? 'text-dark-spruce-700 font-semibold' : 'text-taupe-grey-700 hover:text-dark-spruce-700'}`}>Sobre</a>
+      <a href="/#contact" class="text-taupe-grey-700 hover:text-dark-spruce-700 transition">Contato</a>
     </div>
 
     {/* Mobile Menu Button */}
     <button
       id="mobile-menu-btn"
-      class="md:hidden flex items-center justify-center w-10 h-10 text-gray-700 hover:text-green-700"
+      class="md:hidden flex items-center justify-center w-10 h-10 text-taupe-grey-700 hover:text-dark-spruce-700"
       aria-label="Alternar menu"
     >
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -31,11 +31,11 @@ import { Image } from 'astro:assets';
   </nav>
 
   {/* Mobile Menu */}
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-taupe-grey-200">
     <div class="px-4 py-2 space-y-1">
-      <a href="/" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-700 rounded transition">Página Inicial</a>
-      <a href="/about" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-700 rounded transition">Sobre</a>
-      <a href="/#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-700 rounded transition">Contato</a>
+      <a href="/" class="block px-3 py-2 text-taupe-grey-700 hover:bg-taupe-grey-100 hover:text-dark-spruce-700 rounded transition">Página Inicial</a>
+      <a href="/about" class="block px-3 py-2 text-taupe-grey-700 hover:bg-taupe-grey-100 hover:text-dark-spruce-700 rounded transition">Sobre</a>
+      <a href="/#contact" class="block px-3 py-2 text-taupe-grey-700 hover:bg-taupe-grey-100 hover:text-dark-spruce-700 rounded transition">Contato</a>
     </div>
   </div>
 </header>

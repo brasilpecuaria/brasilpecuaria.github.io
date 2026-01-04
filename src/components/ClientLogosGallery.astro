@@ -13,9 +13,9 @@ const clientLogos = [
 const scrollingLogos = [...clientLogos, ...clientLogos.slice(0, 3)];
 ---
 
-<section id="gallery" class="py-16 bg-gray-50">
+<section id="gallery" class="py-16 bg-taupe-grey-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+    <h2 class="text-3xl font-bold text-center text-dark-spruce-900 mb-12">
       Confiado por Organizações Líderes
     </h2>
 
@@ -24,7 +24,7 @@ const scrollingLogos = [...clientLogos, ...clientLogos.slice(0, 3)];
       <div class="flex animate-scroll space-x-8 py-8">
         {scrollingLogos.map((logo) => (
           <div key={logo.id} class="flex-shrink-0 h-20 w-40 bg-white rounded-lg shadow flex items-center justify-center p-4">
-            <div class="text-gray-400 font-semibold text-center">{logo.name}</div>
+            <div class="text-taupe-grey-400 font-semibold text-center">{logo.name}</div>
           </div>
         ))}
       </div>
